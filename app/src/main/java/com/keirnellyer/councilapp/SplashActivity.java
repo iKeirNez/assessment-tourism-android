@@ -14,7 +14,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.rotate_splash_icon);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.splash_icon_spinner);
         findViewById(R.id.splash_icon).startAnimation(animation);
 
         Handler handler = new Handler();

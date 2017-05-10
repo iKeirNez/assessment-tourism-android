@@ -15,6 +15,7 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
     //private final OnListFragmentInteractionListener mListener;
 
     public LocationViewAdapter(List<Location> items) {
+        setHasStableIds(true);
         mValues = items;
     }
 
@@ -43,6 +44,11 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
 //                }
             }
         });
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return super.getItemId(position);
     }
 
     @Override

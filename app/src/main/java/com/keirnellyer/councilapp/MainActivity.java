@@ -1,7 +1,6 @@
 package com.keirnellyer.councilapp;
 
 import android.content.res.Configuration;
-import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,7 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -100,18 +98,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void selectItem(int position) {
         ArrayList<Location> locations = new ArrayList<>();
+        String exampleDescription = getResources().getString(R.string.lorem_ipsum_dolor);
 
         switch (position) {
             case 0:
-                String exampleDescription = getResources().getString(R.string.lorem_ipsum_dolor);
+                locations.add(new Location("Andrew Carnegie Birthplace", exampleDescription,
+                        R.drawable.attraction_andrew_carnegie_birthplace));
 
-                Location acBirthplace = new Location("Andrew Carnegie Birthplace", exampleDescription,
-                        R.drawable.andrew_carnegie_birthplace);
-                locations.add(acBirthplace);
+                locations.add(new Location("The Glen", exampleDescription,
+                        R.drawable.attraction_dunfermline_glen));
+                break;
+            case 3:
+                locations.add(new Location("The City Hotel", exampleDescription,
+                        R.drawable.hotel_city_hotel));
 
-                Location glen = new Location("The Glen", exampleDescription,
-                        R.drawable.dunfermline_glen);
-                locations.add(glen);
+                locations.add(new Location("Holiday Express", exampleDescription,
+                        R.drawable.hotel_holiday_express));
+
+                locations.add(new Location("Premier Inn", exampleDescription,
+                        R.drawable.hotel_premier_inn));
                 break;
             default:
                 return;

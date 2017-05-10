@@ -15,7 +15,7 @@ import java.util.List;
 
 public class LocationListFragment extends Fragment {
 
-    private final List<Location> locations = new ArrayList<>();
+    private List<Location> locations = new ArrayList<>();
 
     public LocationListFragment() {
     }
@@ -24,15 +24,7 @@ public class LocationListFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        String exampleDescription = getResources().getString(R.string.lorem_ipsum_dolor);
-
-        Location acBirthplace = new Location("Andrew Carnegie Birthplace", exampleDescription,
-                R.drawable.andrew_carnegie_birthplace);
-        this.locations.add(acBirthplace);
-
-        Location glen = new Location("The Glen", exampleDescription,
-                R.drawable.dunfermline_glen);
-        this.locations.add(glen);
+        this.locations = getArguments().getParcelableArrayList("locations");
     }
 
     @Override

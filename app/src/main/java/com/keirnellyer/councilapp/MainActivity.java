@@ -1,6 +1,7 @@
 package com.keirnellyer.councilapp;
 
 import android.content.res.Configuration;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,6 +15,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -95,15 +99,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void selectItem(int position) {
-        Fragment fragment;
+        ArrayList<Location> locations = new ArrayList<>();
 
         switch (position) {
             case 0:
-                fragment = new LocationListFragment();
+                String exampleDescription = getResources().getString(R.string.lorem_ipsum_dolor);
+
+                Location acBirthplace = new Location("Andrew Carnegie Birthplace", exampleDescription,
+                        R.drawable.andrew_carnegie_birthplace);
+                locations.add(acBirthplace);
+
+                Location glen = new Location("The Glen", exampleDescription,
+                        R.drawable.dunfermline_glen);
+                locations.add(glen);
                 break;
             default:
                 return;
         }
+
+        Bundle bundle = new Bundle();
+        bundle.putParcelableArrayList("locations", locations);
+
+        Fragment fragment = new LocationListFragment();
+        fragment.setArguments(bundle);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();

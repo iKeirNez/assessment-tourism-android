@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (position) {
             case 0:
-                fragment = new AttractionListFragment();
+                fragment = new LocationListFragment();
                 break;
             default:
                 return;

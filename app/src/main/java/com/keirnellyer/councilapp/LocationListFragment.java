@@ -13,11 +13,11 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AttractionListFragment extends Fragment {
+public class LocationListFragment extends Fragment {
 
-    private final List<Attraction> attractions = new ArrayList<>();
+    private final List<Location> locations = new ArrayList<>();
 
-    public AttractionListFragment() {
+    public LocationListFragment() {
     }
 
     @Override
@@ -26,26 +26,26 @@ public class AttractionListFragment extends Fragment {
 
         String exampleDescription = getResources().getString(R.string.lorem_ipsum_dolor);
 
-        Attraction acBirthplace = new Attraction("Andrew Carnegie Birthplace", exampleDescription,
+        Location acBirthplace = new Location("Andrew Carnegie Birthplace", exampleDescription,
                 R.drawable.andrew_carnegie_birthplace);
-        attractions.add(acBirthplace);
+        this.locations.add(acBirthplace);
 
-        Attraction glen = new Attraction("The Glen", exampleDescription,
+        Location glen = new Location("The Glen", exampleDescription,
                 R.drawable.dunfermline_glen);
-        attractions.add(glen);
+        this.locations.add(glen);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_attraction_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_location_list, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
             Context context = view.getContext();
             RecyclerView recyclerView = (RecyclerView) view;
             recyclerView.setLayoutManager(new LinearLayoutManager(context));
-            recyclerView.setAdapter(new AttractionsViewAdapter(attractions));
+            recyclerView.setAdapter(new LocationViewAdapter(locations));
         }
 
         return view;

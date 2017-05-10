@@ -9,5 +9,5 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.keirnellyer.councilapp.AttractionListFragment"
-    tools:listitem="@layout/fragment_attraction" />
+    tools:context="com.keirnellyer.councilapp.LocationListFragment"
+    tools:listitem="@layout/fragment_location" />

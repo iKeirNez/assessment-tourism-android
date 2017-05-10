@@ -9,29 +9,29 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class AttractionsViewAdapter extends RecyclerView.Adapter<AttractionsViewAdapter.ViewHolder> {
+public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapter.ViewHolder> {
 
-    private final List<Attraction> mValues;
+    private final List<Location> mValues;
     //private final OnListFragmentInteractionListener mListener;
 
-    public AttractionsViewAdapter(List<Attraction> items) {
+    public LocationViewAdapter(List<Location> items) {
         mValues = items;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.fragment_attraction, parent, false);
+                .inflate(R.layout.fragment_location, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        Attraction attraction = mValues.get(position);
-        holder.mItem = attraction;
-        holder.mTitleView.setText(attraction.getName());
-        holder.mDescriptionView.setText(attraction.getDescription());
-        holder.mImageView.setImageResource(attraction.getImageResId());
+        Location location = mValues.get(position);
+        holder.mItem = location;
+        holder.mTitleView.setText(location.getName());
+        holder.mDescriptionView.setText(location.getDescription());
+        holder.mImageView.setImageResource(location.getImageResId());
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +55,7 @@ public class AttractionsViewAdapter extends RecyclerView.Adapter<AttractionsView
         public final TextView mTitleView;
         public final TextView mDescriptionView;
         public final ImageView mImageView;
-        public Attraction mItem;
+        public Location mItem;
 
         public ViewHolder(View view) {
             super(view);

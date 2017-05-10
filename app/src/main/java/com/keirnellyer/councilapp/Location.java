@@ -1,11 +1,11 @@
 package com.keirnellyer.councilapp;
 
-public class Attraction {
+public class Location {
     private String name;
     private String description;
     private int imageResId;
 
-    public Attraction(String name, String description, int imageResId) {
+    public Location(String name, String description, int imageResId) {
         this.name = name;
         this.description = description;
         this.imageResId = imageResId;

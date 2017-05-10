@@ -108,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
                 locations.add(new Location("The Glen", exampleDescription,
                         R.drawable.attraction_dunfermline_glen));
                 break;
+            case 1:
+                // TODO events
+                break;
             case 2:
                 locations.add(new Location("Bella Italia", exampleDescription,
                         R.drawable.restuarant_bella_italia));

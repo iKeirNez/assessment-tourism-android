@@ -108,6 +108,19 @@ public class MainActivity extends AppCompatActivity {
                 locations.add(new Location("The Glen", exampleDescription,
                         R.drawable.attraction_dunfermline_glen));
                 break;
+            case 2:
+                locations.add(new Location("Bella Italia", exampleDescription,
+                        R.drawable.restuarant_bella_italia));
+
+                locations.add(new Location("Luigi's", exampleDescription,
+                        R.drawable.restuarant_luigis));
+
+                locations.add(new Location("The Wood Mill", exampleDescription,
+                        R.drawable.restuarant_wood_mill));
+
+                locations.add(new Location("Toni Macaroni", exampleDescription,
+                        R.drawable.restuarant_toni_macaroni));
+                break;
             case 3:
                 locations.add(new Location("The City Hotel", exampleDescription,
                         R.drawable.hotel_city_hotel));

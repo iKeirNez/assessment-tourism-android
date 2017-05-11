@@ -4,6 +4,7 @@ import android.content.res.Configuration;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        selectItem(0);
+        selectItem(0, false);
         drawerToggle.syncState();
     }
 
@@ -92,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            selectItem(position);
+            selectItem(position, true);
         }
     }
 
-    private void selectItem(int position) {
+    private void selectItem(int position, boolean animate) {
         ArrayList<Location> locations = new ArrayList<>();
         String exampleDescription = getResources().getString(R.string.lorem_ipsum_dolor);
 
@@ -145,10 +146,14 @@ public class MainActivity extends AppCompatActivity {
         fragment.setArguments(bundle);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
-                .replace(R.id.content_frame, fragment)
-                .commit();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        if (animate) {
+            fragmentTransaction.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+        }
+
+        fragmentTransaction.replace(R.id.content_frame, fragment);
+        fragmentTransaction.commit();
 
         // update selected item and title, then close the drawer
         drawerList.setItemChecked(position, true);

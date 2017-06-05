@@ -110,7 +110,14 @@ public class MainActivity extends AppCompatActivity {
                         R.drawable.attraction_dunfermline_glen));
                 break;
             case 1:
-                // TODO events
+                locations.add(new Location("Music Festival", exampleDescription,
+                        R.drawable.event_music_festival));
+
+                locations.add(new Location("Farmers Market", exampleDescription,
+                        R.drawable.event_farmers_market));
+
+                locations.add(new Location("Bike Race", "At Knockhill",
+                        R.drawable.event_bike_racing));
                 break;
             case 2:
                 locations.add(new Location("Bella Italia", exampleDescription,

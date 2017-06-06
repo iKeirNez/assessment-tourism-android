@@ -37,6 +37,8 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
 
         Picasso.with(holder.mView.getContext())
                 .load(location.getUrl())
+                .fit()
+                .centerInside()
                 .into(holder.mImageView);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {

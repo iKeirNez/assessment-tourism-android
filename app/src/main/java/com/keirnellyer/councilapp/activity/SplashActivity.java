@@ -1,4 +1,4 @@
-package com.keirnellyer.councilapp;
+package com.keirnellyer.councilapp.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
+import com.keirnellyer.councilapp.R;
 
 public class SplashActivity extends AppCompatActivity {
     @Override

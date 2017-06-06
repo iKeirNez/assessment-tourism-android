@@ -1,4 +1,4 @@
-package com.keirnellyer.councilapp;
+package com.keirnellyer.councilapp.activity;
 
 import android.content.res.Configuration;
 import android.support.annotation.Nullable;
@@ -15,6 +15,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.keirnellyer.councilapp.Location;
+import com.keirnellyer.councilapp.LocationListFragment;
+import com.keirnellyer.councilapp.R;
 
 import java.util.ArrayList;
 

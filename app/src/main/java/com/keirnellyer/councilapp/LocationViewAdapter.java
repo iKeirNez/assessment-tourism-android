@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapter.ViewHolder> {
@@ -32,7 +34,10 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
         holder.mItem = location;
         holder.mTitleView.setText(location.getName());
         holder.mDescriptionView.setText(location.getDescription());
-        holder.mImageView.setImageResource(location.getImageResId());
+
+        Picasso.with(holder.mView.getContext())
+                .load(location.getUrl())
+                .into(holder.mImageView);
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override

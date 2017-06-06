@@ -6,18 +6,18 @@ import android.os.Parcelable;
 public class Location implements Parcelable {
     private String name;
     private String description;
-    private int imageResId;
+    private String url;
 
-    public Location(String name, String description, int imageResId) {
+    public Location(String name, String description, String url) {
         this.name = name;
         this.description = description;
-        this.imageResId = imageResId;
+        this.url = url;
     }
 
     protected Location(Parcel in) {
         this.name = in.readString();
         this.description = in.readString();
-        this.imageResId = in.readInt();
+        this.url = in.readString();
     }
 
     public String getName() {
@@ -28,8 +28,8 @@ public class Location implements Parcelable {
         return description;
     }
 
-    public int getImageResId() {
-        return imageResId;
+    public String getUrl() {
+        return url;
     }
 
     @Override
@@ -41,7 +41,7 @@ public class Location implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.name);
         dest.writeString(this.description);
-        dest.writeInt(this.imageResId);
+        dest.writeString(this.url);
     }
 
     public static final Parcelable.Creator<Location> CREATOR = new Parcelable.Creator<Location>() {

@@ -103,12 +103,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void selectItem(int position, boolean animate) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
         if (position == 0) {
             Fragment fragment = new HomeFragment();
-            fragmentTransaction.replace(R.id.content_frame, fragment);
+            changeContent(fragment, animate);
         } else {
             ArrayList<Location> locations = new ArrayList<>();
             String exampleDescription = getResources().getString(R.string.lorem_ipsum_dolor);
@@ -164,18 +161,23 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment = new LocationListFragment();
             fragment.setArguments(bundle);
 
-            fragmentTransaction.replace(R.id.content_frame, fragment);
+            changeContent(fragment, animate);
         }
-
-        if (animate) {
-            fragmentTransaction.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-        }
-
-        fragmentTransaction.commit();
 
         // update selected item and title, then close the drawer
         drawerList.setItemChecked(position, true);
         setTitle(drawerTitles[position]);
         drawerLayout.closeDrawer(drawerList);
+    }
+
+    private void changeContent(Fragment fragment, boolean animate) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
+        if (animate) {
+            fragmentTransaction.setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+        }
+
+        fragmentTransaction.replace(R.id.content_frame, fragment);
+        fragmentTransaction.commit();
     }
 }

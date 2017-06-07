@@ -5,16 +5,18 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_title">Navigation</string>
     <string-array name="navigation_items">
-        <item>@string/activity_attractions_title</item>
-        <item>@string/activity_events_title</item>
-        <item>@string/activity_restaurants_title</item>
-        <item>@string/activity_hotels_title</item>
+        <item>@string/fragment_home_title</item>
+        <item>@string/fragment_attractions_title</item>
+        <item>@string/fragment_events_title</item>
+        <item>@string/fragment_restaurants_title</item>
+        <item>@string/fragment_hotels_title</item>
     </string-array>
 
-    <string name="activity_attractions_title">Attractions</string>
-    <string name="activity_events_title">Events</string>
-    <string name="activity_restaurants_title">Restaurants</string>
-    <string name="activity_hotels_title">Hotels</string>
+    <string name="fragment_home_title">Home</string>
+    <string name="fragment_attractions_title">Attractions</string>
+    <string name="fragment_events_title">Events</string>
+    <string name="fragment_restaurants_title">Restaurants</string>
+    <string name="fragment_hotels_title">Hotels</string>
     
     <string name="action_settings">Settings</string>
 

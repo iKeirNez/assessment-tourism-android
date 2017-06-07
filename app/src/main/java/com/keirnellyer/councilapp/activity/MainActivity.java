@@ -3,7 +3,6 @@ package com.keirnellyer.councilapp.activity;
 import android.content.res.Configuration;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -46,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         drawerList = (ListView) findViewById(R.id.left_drawer);
         drawerList.setAdapter(new ArrayAdapter<>(this, R.layout.drawer_list_item, drawerTitles));
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
-        drawerList.setItemChecked(0, true); // default screen is home
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
@@ -73,7 +71,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        selectItem(drawerList.getCheckedItemPosition(), false);
+
+        // only initialize initial screen on first launch
+        // this prevents losing fragment states' during orientation changes
+        if (savedInstanceState == null) {
+            selectItem(0, false);
+        }
+
         drawerToggle.syncState();
     }
 

@@ -10,18 +10,31 @@
         android:layout_height="match_parent"
         android:layout_margin="8dp">
 
-        <ImageView
-            android:id="@+id/attraction_image"
+        <RelativeLayout
+            android:id="@+id/attraction_image_container"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_alignParentTop="true"
-            android:scaleType="centerCrop" />
+            android:layout_height="250dp" >
+
+            <ImageView
+                android:id="@+id/attraction_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:scaleType="centerCrop" />
+
+            <ProgressBar
+                android:id="@+id/loading_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/attraction_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/attraction_image"
+            android:layout_below="@+id/attraction_image_container"
             android:maxLines="3"
             android:padding="8dp"
             android:textColor="#222"

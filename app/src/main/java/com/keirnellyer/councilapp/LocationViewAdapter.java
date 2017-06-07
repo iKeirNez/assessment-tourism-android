@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -39,7 +41,17 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
                 .load(location.getUrl())
                 .fit()
                 .centerInside()
-                .into(holder.mImageView);
+                .into(holder.mImageView, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        holder.mLoadingIndicator.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onError() {
+
+                    }
+                });
 
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +80,7 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
         public final TextView mTitleView;
         public final TextView mDescriptionView;
         public final ImageView mImageView;
+        public final ProgressBar mLoadingIndicator;
         public Location mItem;
 
         public ViewHolder(View view) {
@@ -76,6 +89,7 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
             mTitleView = (TextView) view.findViewById(R.id.attraction_title);
             mDescriptionView = (TextView) view.findViewById(R.id.attraction_description);
             mImageView = (ImageView) view.findViewById(R.id.attraction_image);
+            mLoadingIndicator = (ProgressBar) view.findViewById(R.id.loading_indicator);
         }
 
         @Override

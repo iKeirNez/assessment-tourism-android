@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         drawerList = (ListView) findViewById(R.id.left_drawer);
         drawerList.setAdapter(new ArrayAdapter<>(this, R.layout.drawer_list_item, drawerTitles));
         drawerList.setOnItemClickListener(new DrawerItemClickListener());
+        drawerList.setItemChecked(0, true); // default screen is home
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close) {
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        selectItem(0, false);
+        selectItem(drawerList.getCheckedItemPosition(), false);
         drawerToggle.syncState();
     }
 

@@ -20,7 +20,7 @@ public class HomeFragment extends Fragment {
         ImageView featureImage = (ImageView) view.findViewById(R.id.featureImage);
 
         Picasso.with(getContext())
-                .load("http://www.bbc.co.uk/staticarchive/0bc20c8f207a3858706d5eb28eb269696b212257.jpg")
+                .load(getString(R.string.url_home_feature_image))
                 .fit()
                 .centerCrop()
                 .into(featureImage, new Callback() {

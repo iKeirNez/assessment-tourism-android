@@ -118,43 +118,43 @@ public class MainActivity extends AppCompatActivity {
             switch (position) {
                 case 1:
                     locations.add(new Location("Andrew Carnegie Birthplace", exampleDescription,
-                            "https://media-cdn.tripadvisor.com/media/photo-s/0b/0f/5c/c2/andrew-carnegie-birthplace.jpg"));
+                            getString(R.string.url_andrew_carnegie_birthplace_image)));
 
                     locations.add(new Location("The Glen", exampleDescription,
-                            "http://www.balmule.co.uk/wp-content/uploads/2015/08/pittencrieff-park-entrance-dunfermline.jpg"));
+                            getString(R.string.url_pittencrieff_park_image)));
                     break;
                 case 2:
                     locations.add(new Location("Music Festival", exampleDescription,
-                            "http://cdn.pitchfork.com/features/8891/92bc315a.jpg"));
+                            getString(R.string.url_music_festival_image)));
 
                     locations.add(new Location("Farmers Market", exampleDescription,
-                            "http://www.fifefarmersmarket.co.uk/assets/images/markets-dfme/TDR_7214DUN.jpg"));
+                            getString(R.string.url_farmers_market_image)));
 
                     locations.add(new Location("Bike Race", "At Knockhill",
-                            "http://www.knockhill.com/wordpress/wp-content/uploads/2013/04/Teasdale-Dominant-at-Knockhill.jpg"));
+                            getString(R.string.url_knockhill_bike_race_image)));
                     break;
                 case 3:
                     locations.add(new Location("Bella Italia", exampleDescription,
-                            "https://media-cdn.tripadvisor.com/media/photo-s/06/42/c8/e4/bella-italia-dunfermline.jpg"));
+                            getString(R.string.url_bella_italia_image)));
 
                     locations.add(new Location("Luigi's", exampleDescription,
-                            "https://media-cdn.tripadvisor.com/media/photo-s/08/2b/61/f3/luigi-s-restaurant.jpg"));
+                            getString(R.string.url_luigis_image)));
 
                     locations.add(new Location("The Wood Mill", exampleDescription,
-                            "https://www.gourmetsociety.co.uk/uploads/images/restaurants/90f87d0fc70db2f479b81cbe5e6f77a7-image.png"));
+                            getString(R.string.url_the_wood_mill_image)));
 
                     locations.add(new Location("Toni Macaroni", exampleDescription,
-                            "https://media-cdn.tripadvisor.com/media/photo-s/0f/51/e4/c6/photo-two.jpg"));
+                            getString(R.string.url_toni_macaroni_image)));
                     break;
                 case 4:
                     locations.add(new Location("The City Hotel", exampleDescription,
-                            "https://media-cdn.tripadvisor.com/media/photo-s/03/15/ba/62/the-city-hotel.jpg"));
+                            getString(R.string.url_the_city_hotel_image)));
 
                     locations.add(new Location("Holiday Express", exampleDescription,
-                            "http://ihg.scene7.com/is/image/ihg/holiday-inn-express-dunfermline-2531769741-4x3"));
+                            getString(R.string.url_holiday_express_image)));
 
                     locations.add(new Location("Premier Inn", exampleDescription,
-                            "http://www.premierinn.com/content/dam/pi/websites/hotelimages/gb/en/D/DUNDIS/xDUNDIS,P201.jpg.pagespeed.ic.2anCUnWFEf.jpg"));
+                            getString(R.string.url_premier_inn_image)));
                     break;
                 default:
                     return;

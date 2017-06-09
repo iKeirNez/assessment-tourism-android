@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="url_home_feature_image">http://www.bbc.co.uk/staticarchive/0bc20c8f207a3858706d5eb28eb269696b212257.jpg</string>
+    <string name="url_council_logo_image">https://www.myjobscotland.gov.uk/sites/default/files/organisations/Fife_0.png</string>
 
     <string name="url_andrew_carnegie_birthplace_image">https://media-cdn.tripadvisor.com/media/photo-s/0b/0f/5c/c2/andrew-carnegie-birthplace.jpg</string>
     <string name="url_pittencrieff_park_image">http://www.balmule.co.uk/wp-content/uploads/2015/08/pittencrieff-park-entrance-dunfermline.jpg</string>

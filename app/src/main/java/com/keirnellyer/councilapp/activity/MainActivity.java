@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             changeContent(fragment, animate);
         } else {
             ArrayList<Location> locations = new ArrayList<>();
-            String exampleDescription = getResources().getString(R.string.lorem_ipsum_dolor);
+            String exampleDescription = getResources().getString(R.string.sample_text_short);
 
             switch (position) {
                 case 1:

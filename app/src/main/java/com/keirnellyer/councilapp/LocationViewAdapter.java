@@ -89,7 +89,7 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
             mTitleView = (TextView) view.findViewById(R.id.attraction_title);
             mDescriptionView = (TextView) view.findViewById(R.id.attraction_description);
             mImageView = (ImageView) view.findViewById(R.id.attraction_image);
-            mLoadingIndicator = (ProgressBar) view.findViewById(R.id.loading_indicator);
+            mLoadingIndicator = (ProgressBar) view.findViewById(R.id.feature_image_loading_indicator);
         }
 
         @Override

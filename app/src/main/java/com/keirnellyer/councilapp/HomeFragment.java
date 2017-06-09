@@ -17,7 +17,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
-        ImageView featureImage = (ImageView) view.findViewById(R.id.featureImage);
+        ImageView featureImage = (ImageView) view.findViewById(R.id.feature_image);
 
         Picasso.with(getContext())
                 .load(getString(R.string.url_home_feature_image))
@@ -26,7 +26,25 @@ public class HomeFragment extends Fragment {
                 .into(featureImage, new Callback() {
                     @Override
                     public void onSuccess() {
-                        view.findViewById(R.id.loading_indicator).setVisibility(View.GONE);
+                        view.findViewById(R.id.feature_image_loading_indicator).setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onError() {
+
+                    }
+                });
+
+        ImageView councilLogo = (ImageView) view.findViewById(R.id.council_logo);
+
+        Picasso.with(getContext())
+                .load(getString(R.string.url_council_logo_image))
+                .fit()
+                .centerInside()
+                .into(councilLogo, new Callback() {
+                    @Override
+                    public void onSuccess() {
+                        view.findViewById(R.id.council_logo_loading_indicator).setVisibility(View.GONE);
                     }
 
                     @Override

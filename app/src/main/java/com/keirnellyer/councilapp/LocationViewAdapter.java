@@ -40,7 +40,7 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
         Picasso.with(holder.mView.getContext())
                 .load(location.getUrl())
                 .fit()
-                .centerInside()
+                .centerCrop()
                 .into(holder.mImageView, new Callback() {
                     @Override
                     public void onSuccess() {

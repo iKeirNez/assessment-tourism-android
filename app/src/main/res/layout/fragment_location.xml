@@ -30,25 +30,29 @@
                 android:indeterminate="true" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/attraction_title"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/attraction_image_container"
-            android:maxLines="3"
-            android:padding="8dp"
-            android:textColor="#222"
-            android:textStyle="bold"
-            android:textSize="22sp" />
+            android:padding="5dp">
 
-        <TextView
-            android:id="@+id/attraction_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/attraction_title"
-            android:padding="8dp"
-            android:textColor="#666"
-            android:textSize="14sp" />
+            <TextView
+                android:id="@+id/attraction_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:textColor="#222"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/attraction_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/attraction_title"
+                android:paddingTop="5dp"
+                android:textColor="#666"
+                android:textSize="14sp" />
+        </RelativeLayout>
     </RelativeLayout>
 </android.support.v7.widget.CardView>

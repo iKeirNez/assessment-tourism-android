@@ -20,5 +20,5 @@
         android:textColor="@color/colorSecondaryText"
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"
-        android:text="Developed by Keir Nellyer" />
+        android:text="@string/splash_small_text" />
 </RelativeLayout>

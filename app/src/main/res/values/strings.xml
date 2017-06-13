@@ -21,8 +21,6 @@
     <string name="fragment_restaurants_title">Restaurants</string>
     <string name="fragment_hotels_title">Hotels</string>
     
-    <string name="action_settings">Settings</string>
-
     <string name="sample_text_short">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis hendrerit aliquam. Suspendisse et feugiat sapien, in tempus orci.</string>
     <string name="sample_text_long">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non quam eu lacus consequat porta sed id erat. Cras accumsan purus nec leo ultrices, id cursus turpis pulvinar. Curabitur sit amet ante id nunc lobortis tempus sed quis quam. Ut at sodales justo. Nullam sodales sapien eget ante suscipit vestibulum. Curabitur rhoncus, sapien sit amet mattis pretium, dui velit dictum justo, eget suscipit sapien libero eu augue. Cras ultricies sagittis volutpat. Nullam porttitor faucibus ornare. Nulla vel elit at sapien blandit efficitur. Mauris et ipsum a ex interdum hendrerit vitae vel purus.</string>
     <string name="home_title">Welcome to Fife!</string>

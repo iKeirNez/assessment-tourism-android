@@ -14,6 +14,8 @@
     </string-array>
 
     <string name="fragment_home_title">Home</string>
+    <string name="fragment_home_feature_image_description">The Forth Crossings in Fife</string>
+    <string name="fragment_home_council_logo_description">Fife Council logo</string>
     <string name="fragment_attractions_title">Attractions</string>
     <string name="fragment_events_title">Events</string>
     <string name="fragment_restaurants_title">Restaurants</string>

@@ -36,6 +36,7 @@ public class LocationViewAdapter extends RecyclerView.Adapter<LocationViewAdapte
         holder.mItem = location;
         holder.mTitleView.setText(location.getName());
         holder.mDescriptionView.setText(location.getDescription());
+        holder.mImageView.setContentDescription("Image of " + location.getName());
 
         Picasso.with(holder.mView.getContext())
                 .load(location.getUrl())

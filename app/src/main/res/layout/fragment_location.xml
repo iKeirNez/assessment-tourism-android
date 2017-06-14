@@ -33,9 +33,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/attraction_image_container"
             android:paddingTop="8dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="13dp">
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="20dp">
 
             <TextView
                 android:id="@+id/attraction_title"
